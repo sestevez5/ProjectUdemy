@@ -1,11 +1,15 @@
 <div class="row d-flex " >
     <div class="col-md-5">
-        <app-recipes-list></app-recipes-list>
+        <app-recipes-list (recipeWasSelected)="selectedRecipe = $event" ></app-recipes-list>
     </div>
-    <div class="col-md-7 d-flex align-items-center">
-     
-        <app-recipe-detail class="flex-fill"></app-recipe-detail>
-   
-
+    <div class="col-md-7">
+    
+        <app-recipe-detail [recipe]="selectedRecipe"  *ngIf="selectedRecipe; else infoText" class="d-flex align-items-center">
+       
+        </app-recipe-detail>
+        <ng-template #infoText>
+            <p>Please selected a Recipe!</p>
+        </ng-template>
+  
     </div>
 </div>
