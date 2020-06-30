@@ -1,4 +1,8 @@
-<div class="card mb-1 card-hover" (click)="onSelected()">
+<div 
+style ="cursor: pointer"
+ [routerLink]="[recipe.id]"
+    routerLinkActive="active"
+    class="card mb-1 card-hover" >
     <div class="row no-gutters d-flex align-items-stretch reveal">
      <div class="col-md-6"> 
          <img class="card-img h-100" src="{{ recipe.imagePath }}" alt="">
@@ -11,6 +15,7 @@
             
      <a href="#" class="card-link">Edit</a>
      <a href="#" class="card-link">Delete</a>
+     <a href="#" class="card-link">{{recipe.id}}</a>
      </div>
     </div>
  </div>

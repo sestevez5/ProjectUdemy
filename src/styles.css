@@ -3,3 +3,8 @@
     box-shadow: 0 0 10px black;
     transition: box-shadow 0.5s;
 }
+
+.active {
+
+    background-color: antiquewhite
+}
